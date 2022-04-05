@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		
+		<h5 style="position: absolute; left: 600px; top: 50px" class="score"></h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 250px; left: 600px;">		
+		<img class="shooter" src="peashooter.png"  style="top: 350px; left: 600px;">	
+		<img class="shooter" src="peashooter.png"  style="top: 450px; left: 600px;">	
+		<img class="shooter" src="peashooter.png"  style="top: 550px; left: 600px;">
+		<img class="shooter" src="peashooter.png"  style="top: 650px; left: 600px;">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 220px; left: 1500px;">
+		<img class="zombies" src="zombie2.png" style="top: 320px; left: 1500px;">
+		<img class="zombies" src="zombie2.png" style="top: 420px; left: 1500px;">
+		<img class="zombies" src="zombie4.png" style="top: 520px; left: 1500px;">
+		<img class="zombies" src="zombie4.png" style="top: 620px; left: 1500px;">
+	</div>
+<script>
+	let zomb = document.querySelectorAll(".zombies");
+	let shot = document.querySelectorAll(".shooter");
+	let zomb1 = 1500
+	let zomb2 = 1500
+	let zomb3 = 1500
+	let zomb4 = 1500
+	let zomb5 = 1500
+
+	zomb[0].onclick = function(){
+		zomb1 = zomb1 - 100;
+		zomb[0].style.left = zomb1 + "px"
+		if(zomb1 == 600){
+			shot[0].style.display = "none"
+		}
+	}
+
+	zomb[1].onclick = function(){
+		zomb2 = zomb2 - 100;
+		zomb[1].style.left = zomb2 + "px"
+		if(zomb2 == 600){
+			shot[1].style.display = "none"
+		}
+	}
+
+	zomb[2].onclick = function(){
+		zomb3 = zomb3 - 100;
+		zomb[2].style.left = zomb3 + "px"
+		if(zomb3 == 600){
+			shot[2].style.display = "none"
+		}
+	}
+
+	zomb[3].onclick = function(){
+		zomb4 = zomb4 - 100;
+		zomb[3].style.left = zomb4 + "px"
+		if(zomb4 == 600){
+			shot[3].style.display = "none"
+		}
+	}
+
+	zomb[4].onclick = function(){
+		zomb5 = zomb5 - 100;
+		zomb[4].style.left = zomb5 + "px"
+		if(zomb5 == 600){
+			shot[4].style.display = "none"
+		}
+	}
+
+
+</script>
+</body>
+</html>
